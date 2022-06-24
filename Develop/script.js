@@ -8,9 +8,12 @@ function randomNo(x,y){
     return randomNo;
 }
 
-// Generates random letter
+// Generates random letters and special characters
 var codebaseAlpha = "abcdefghijklmnopqrstuvwxyz".split("");
 var randomAlpha = codebaseAlpha[randomNo(0,25)];
+
+var codebaseSpecial = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split("");
+var randomSpecial = codebaseSpecial[randomNo(0,codebaseSpecial.length-1)];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -22,7 +25,21 @@ function writePassword() {
   function generatePassword(){
     var passLength = prompt("Please specify a length between 8 to 128 characters.");
     if(passLength >= 8 && passLength <= 128){
-        alert("Guess it worked.");
+
+        var lowerCase = confirm("First of all, would you like to include lowercase letters?");
+        //var upperCase = confirm("It shall be done. What about uppercases?")
+        //var numCase = confirm("I see. Would you like to include numbers?");
+        //var specialCase = confirm("Lastly, would you like your password to have special characters?\n"+"Special characters includes !#$%&'()*+,-./:;<=>?@[]^_`{|}~");
+
+        var passwordProg = ["dummy"];
+        for (var i = 0; i < passLength; i++) {
+            var randomAlpha = codebaseAlpha[randomNo(0,25)];
+            passwordProg.unshift(randomAlpha);
+            console.log("The amount of times this loop ran: "+(i+1));
+        }
+        passwordProg.pop();
+        console.log(passwordProg.join(""));
+
     }else{
         alert("Your specified length is either too long or too short, please enter another number.");
         return(generatePassword());

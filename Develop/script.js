@@ -8,12 +8,11 @@ function randomNo(x,y){
     return randomNo;
 }
 
-// Generates random letters and special characters
+// Generates random alphabetical letters
 var codebaseAlpha = "abcdefghijklmnopqrstuvwxyz".split("");
-var randomAlpha = codebaseAlpha[randomNo(0,25)];
 
+// Generates random characters
 var codebaseSpecial = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~".split("");
-var randomSpecial = codebaseSpecial[randomNo(0,codebaseSpecial.length-1)];
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");

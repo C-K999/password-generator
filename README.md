@@ -1,6 +1,4 @@
-# JavaScript: [Password Generator][]
-
-## At First Glance
+# JavaScript: ![Password Generator][https://c-k999.github.io/password-generator/]
 
 This is a web application hosting a password generator. The user must first specify a valid password length between 8 to 128 characters. Next, the user will be asked for specifications for the password generated, including the option to include lower and uppercase characters, numbers, and special characters compatible with password generations.
 
@@ -44,5 +42,5 @@ The following image shows the web application's functionality:
 
 - - -
 © 2022 Clement Koo
-[LinkedIn][https://www.linkedin.com/in/clement-t-k-459322138/]
-[Portfolio][https://c-k999.github.io/proto-professional-portfolio/]
+![LinkedIn][https://www.linkedin.com/in/clement-t-k-459322138/]
+![Portfolio][https://c-k999.github.io/proto-professional-portfolio/]
